@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>데이비드 가위바위보</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="game">
+    <!-- 배경 -->
+    <img id="background" src="assets/bg-base.png" alt="배경">
+
+    <!-- 데이비드 이미지(시작 전 깜빡임) -->
+    <img id="david-cycler" src="assets/david-scissors.png" alt="데이비드" />
+
+    <!-- START 오버레이 (클릭하면 게임 시작) -->
+    <img id="start-screen" src="assets/start-overlay.png" alt="START" />
+
+    <!-- 플레이어 선택 화면 (보여줄 때 display:block) -->
+    <div id="choice-screen" class="hidden">
+      <img id="choice-bg" src="assets/screen-before-choice.png" alt="선택 배경">
+      <div id="buttons">
+        <img id="btn-scissors" data-choice="scissors" class="choice-btn" src="assets/btn-scissors-default.png" alt="가위">
+        <img id="btn-rock"     data-choice="rock"     class="choice-btn" src="assets/btn-rock-default.png"     alt="바위">
+        <img id="btn-paper"    data-choice="paper"    class="choice-btn" src="assets/btn-paper-default.png"    alt="보">
+      </div>
+    </div>
+
+    <!-- 결과 표시 화면 (선택 후) -->
+    <div id="result-screen" class="hidden">
+      <div id="center-box">
+        <!-- 흰 정사각형 안에 데이비드 선택이미지가 들어감 -->
+        <img id="david-choice" src="" alt="데이비드의 선택">
+      </div>
+
+      <!-- 결과 문구 이미지 (비김/데이비드 승/플레이어 승) -->
+      <img id="result-text" src="" alt="결과">
+
+      <!-- 다시하기 버튼 -->
+      <img id="btn-retry" src="assets/btn-retry.png" alt="다시하기" />
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
